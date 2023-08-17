@@ -10,6 +10,7 @@ import 'package:second_layout/screen/home/xiaomi/xiaomi.dart';
 import 'package:second_layout/screen/login/login.dart';
 import 'package:second_layout/screen/me/me.dart';
 import 'package:second_layout/screen/navigation_drawer/navigation_bar_drawer.dart';
+import 'package:second_layout/screen/test/test.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -79,6 +80,14 @@ class _HomeState extends State<Home> {
                     onTap: (){
                       Navigator.of(context).pushReplacement(MaterialPageRoute(builder:
                           (context) => const Login()));
+                    }
+                ),
+                SpeedDialChild(
+                    child: const Icon(Icons.animation),
+                    label: 'Test',
+                    onTap: (){
+                      Navigator.of(context).push(MaterialPageRoute(builder:
+                          (context) => const Test()));
                     }
                 ),
               ],
